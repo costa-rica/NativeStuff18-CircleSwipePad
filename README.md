@@ -1,8 +1,9 @@
-# React Native Stuff - Circle touch pad
+# React Native Stuff - Circle Swipe Pad
 
 ## Description
 
-Circle touch pad
+See GestureScreen06.
+Uses Gesture detector to display cicle swipe pad on tap of screen. then the circle tap senses swiping. Swipe kept inside the inner circle hides the circle swipe pad
 
 ## Environment Variables
 
