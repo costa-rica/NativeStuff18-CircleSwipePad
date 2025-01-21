@@ -58,8 +58,20 @@ export default function Home({ navigation }) {
             goTo={"GestureScreen06"}
             title={"GestureScreen06"}
             description={
-              "Initial pad where user can top and display circle touch pad on user's tap location"
+              "Initial pad where user can top and display circle touch pad on user's tap location. This picks up from Test05.js. CircleTouchPad also uses Test05.js"
             }
+            navigation={navigation}
+          />
+          <BtnHomNav
+            goTo={"Test06"}
+            title={"Test06"}
+            description={"Second layer of swiping"}
+            navigation={navigation}
+          />
+          <BtnHomNav
+            goTo={"GestureScreen07"}
+            title={"GestureScreen07"}
+            description={"Second layer of swiping on touch pad"}
             navigation={navigation}
           />
         </View>

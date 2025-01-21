@@ -8,6 +8,8 @@ import Test03 from "./screens/Test03";
 import Test04 from "./screens/Test04";
 import Test05 from "./screens/Test05";
 import GestureScreen06 from "./screens/GestureScreen06";
+import Test06 from "./screens/Test06";
+import GestureScreen07 from "./screens/GestureScreen07";
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -22,6 +24,8 @@ export default function App() {
         <Stack.Screen name="Test04" component={Test04} />
         <Stack.Screen name="Test05" component={Test05} />
         <Stack.Screen name="GestureScreen06" component={GestureScreen06} />
+        <Stack.Screen name="Test06" component={Test06} />
+        <Stack.Screen name="GestureScreen07" component={GestureScreen07} />
       </Stack.Navigator>
     </NavigationContainer>
   );

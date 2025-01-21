@@ -5,30 +5,19 @@ import {
   TapGestureHandler,
 } from "react-native-gesture-handler";
 import ViewTemplate from "../screens_core/components/ViewTemplate";
-import CircleTouchPad from "./components/CircleTouchPad";
+import CircleTouchPad02 from "./components/CircleTouchPad02";
 
-const modalRadius = 150;
-export default function GestureScreen06({ navigation }) {
+const modalRadius = 250;
+export default function GestureScreen07({ navigation }) {
   const [modalVisible, setModalVisible] = useState(false);
   const [modalPosition, setModalPosition] = useState({ x: 0, y: 0 });
   const [actionList, setActionList] = useState([]);
   const [tapDetails, setTapDetails] = useState(null);
+  // const [actionsArray, setActionsArray] = useState([]);
 
-  // const handleActionWheel01Button = (buttonName) => {
-  //   console.log("clicked button --> ", buttonName);
-
-  //   if (buttonName == "close") {
-  //     setModalVisible(false);
-  //     console.log(`actionList:`);
-  //     console.log(actionList);
-  //     setActionList([]);
-  //     setTapDetails(null);
-  //   } else {
-  //     console.log("non close action triggered?");
-  //     setActionList((prevState) => [...prevState, { buttonName }]);
-  //   }
-  // };
   const handleTap = (event) => {
+    console.log(`tap event`);
+    console.log(event);
     const { x, y, absoluteX, absoluteY } = event.nativeEvent;
     const timestamp = new Date().toISOString();
     // Set the modal position based on screen coordinates
@@ -56,9 +45,7 @@ export default function GestureScreen06({ navigation }) {
                 actionList.map((elem, index) => {
                   return (
                     <View key={index}>
-                      <Text style={styles.txtAction}>
-                        Action: {elem.buttonName}
-                      </Text>
+                      <Text style={styles.txtAction}>Action: {elem}</Text>
                     </View>
                   );
                 })}
@@ -85,9 +72,11 @@ export default function GestureScreen06({ navigation }) {
                   },
                 ]}
               >
-                <CircleTouchPad
+                <CircleTouchPad02
                   circleRadius={modalRadius}
                   setModalVisible={setModalVisible}
+                  setActionList={setActionList}
+                  actionList={actionList}
                 />
               </View>
             </View>
