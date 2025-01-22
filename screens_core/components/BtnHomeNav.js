@@ -1,5 +1,11 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity,
+  Dimensions,
+} from "react-native";
 
 export default function BtnHomeNav(props) {
   return (
@@ -19,6 +25,7 @@ const styles = StyleSheet.create({
   vwNavGroup: {
     borderBottomWidth: 1,
     paddingBottom: 1,
+    width: Dimensions.get("window").width * 0.8,
   },
   touchOpNav: {
     backgroundColor: "black",

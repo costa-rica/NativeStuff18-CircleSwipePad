@@ -5,6 +5,7 @@ import {
   TouchableOpacity,
   Image,
   ScrollView,
+  Dimensions,
 } from "react-native";
 import BtnHomNav from "./components/BtnHomeNav";
 
@@ -16,6 +17,33 @@ export default function Home({ navigation }) {
       </View>
       <ScrollView>
         <View style={styles.vwButtons}>
+          <View
+            style={{
+              // marginTop: 10,
+              marginBottom: 20,
+              width: Dimensions.get("window").width * 0.9,
+              borderBottomWidth: 1,
+            }}
+          >
+            <Text> Best or of current interest</Text>
+          </View>
+          <BtnHomNav
+            goTo={"GestureScreen08"}
+            title={"GestureScreen08"}
+            description={"new swipe zone targeting alorithm"}
+            navigation={navigation}
+          />
+          <View
+            style={{
+              marginTop: 50,
+              marginBottom: 20,
+              width: Dimensions.get("window").width * 0.9,
+              borderBottomWidth: 1,
+            }}
+          >
+            <Text>OBE or less interesting</Text>
+          </View>
+
           <BtnHomNav
             goTo={"WelcomeScreen"}
             title={"Welcome Screen"}
@@ -86,6 +114,15 @@ export default function Home({ navigation }) {
             goTo={"SvgCircleRadiusIssue"}
             title={"SvgCircleRadiusIssue"}
             description={"Svg Circle r not equal to radius but diameter"}
+            navigation={navigation}
+          />
+
+          <BtnHomNav
+            goTo={"GestureScreen09"}
+            title={"GestureScreen09"}
+            description={
+              "ChatGPT exmple: tap hold > modal detects swipe. ** Not working as expected **"
+            }
             navigation={navigation}
           />
         </View>
