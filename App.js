@@ -10,6 +10,8 @@ import Test05 from "./screens/Test05";
 import GestureScreen06 from "./screens/GestureScreen06";
 import Test06 from "./screens/Test06";
 import GestureScreen07 from "./screens/GestureScreen07";
+import Test07 from "./screens/Test07";
+import SvgCircleRadiusIssue from "./screens/SvgCircleRadiusIssue";
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -26,6 +28,11 @@ export default function App() {
         <Stack.Screen name="GestureScreen06" component={GestureScreen06} />
         <Stack.Screen name="Test06" component={Test06} />
         <Stack.Screen name="GestureScreen07" component={GestureScreen07} />
+        <Stack.Screen name="Test07" component={Test07} />
+        <Stack.Screen
+          name="SvgCircleRadiusIssue"
+          component={SvgCircleRadiusIssue}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

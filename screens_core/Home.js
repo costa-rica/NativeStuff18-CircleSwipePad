@@ -74,6 +74,20 @@ export default function Home({ navigation }) {
             description={"Second layer of swiping on touch pad"}
             navigation={navigation}
           />
+          <BtnHomNav
+            goTo={"Test07"}
+            title={"Test07"}
+            description={
+              "Inner circle swipe bouandaries based on circumference calculation"
+            }
+            navigation={navigation}
+          />
+          <BtnHomNav
+            goTo={"SvgCircleRadiusIssue"}
+            title={"SvgCircleRadiusIssue"}
+            description={"Svg Circle r not equal to radius but diameter"}
+            navigation={navigation}
+          />
         </View>
       </ScrollView>
     </View>
